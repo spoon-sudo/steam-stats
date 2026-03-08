@@ -4,7 +4,7 @@ const appIDinput = document.getElementById('userID');
 submitBtn.addEventListener('click', async () => {
     let appID = appIDinput.value;
 
-    fetch(`http://localhost:8080/stats/ownedGames/${appID}`)
+    fetch(`http://192.168.68.51:8080/stats/ownedGames/${appID}`)
         .then(response => response.json())
         .then(data => {
             const gamesList = document.getElementById('games-list');
